@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --AzulHeader:#1D4D8B;
+    --White: #fff;
+    --BlueHover: #D1E3F3;
+}
+
+/* ----------------------------DESKTOP------------------------------ */
+body{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    height: 70px;
+    background-color: var(--AzulHeader);
+}
+
+.nav__title{
+    color: var(--White);
+    width: max-content;
+    text-decoration: none;
+}
+
+.nav__container{
+    margin: 0 50px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/* MENU DE OPCIONES CON ICONOS */
+.nav__options{
+    margin: 0 25px;
+}
+
+.nav__icons{
+    display: flex;
+    gap: 30px;
+}
+
+.nav__single__icon{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+}
+
+.nav__single__icon a{
+    text-decoration: none;
+    color: var(--White);
+}
+
+.nav__single__icon a:hover{
+    color: var(--BlueHover);
+}
+
+.icon{
+    /* USAMOS TEXT ALIGN PARA ALINEAR HORIZONTALMENTE LA IMAGEN SVG */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
