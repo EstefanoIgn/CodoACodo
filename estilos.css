@@ -1,34 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --AzulHeader:#1D4D8B;
+:root {
+    --AzulTitle: #002366;
     --White: #fff;
     --BlueHover: #D1E3F3;
+    --YellowArgentina: #FDC24F;
 }
 
 /* ----------------------------DESKTOP------------------------------ */
-body{
+body {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
     height: 70px;
-    background-color: var(--AzulHeader);
+    background-color: var(--AzulTitle);
 }
 
-.nav__title{
+.nav__title {
     color: var(--White);
     width: max-content;
     text-decoration: none;
 }
 
-.nav__container{
+.nav__title h1{
+    font-weight: 500;
+}
+
+.nav__container {
     margin: 0 50px;
     height: 100%;
     display: grid;
@@ -37,40 +45,127 @@ header{
 }
 
 /* MENU DE OPCIONES CON ICONOS */
-.nav__options{
+.nav__options {
     margin: 0 25px;
 }
 
-.nav__icons{
+.nav__icons {
     display: flex;
     gap: 30px;
 }
 
-.nav__single__icon{
+.nav__single__icon {
     display: flex;
     flex-direction: column;
     font-size: 0.9em;
 }
 
-.nav__single__icon a{
+.nav__single__icon a {
     text-decoration: none;
     color: var(--White);
 }
 
-.nav__single__icon a:hover{
+.nav__single__icon a:hover {
     color: var(--BlueHover);
 }
 
-.icon{
+.icon__img {
     /* USAMOS TEXT ALIGN PARA ALINEAR HORIZONTALMENTE LA IMAGEN SVG */
     text-align: center;
 }
 
+.main__container {
+    width: 100%;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-image: url(img/img__perito__moreno__min.jpg);
+    background-size: cover;
+}
+
+.first__container{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    text-align: center;
+    align-self: center;
+    line-height: 50px;
+    /* UTILIZO MARGIN-RIGHT:AUTO PARA PEGAR LO MAS POSIBLE HACIA LA IZQUIERDA DEL GRID
+     LOS DOS SPAN */
+    margin-right: auto;
+    color: var(--AzulTitle);
+}
+
+.spanUno{
+    /* ES NECESARIO QUE EL SPAN SE COMPORTE COMO BLOQUE 
+    PARA QUE LA ANIMACION SE APLIQUE CORRECTAMENTE */
+    display: inline-block;
+    font-family: "Caveat", cursive;
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--White);
+    animation: top-down 1s ease-in;
+
+}
+
+.spanDos{
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.spanTres{
+    color: var(--YellowArgentina);
+}
 
 
+.two__container {
+    grid-column: 4/7;
+    grid-row: 1/5;
+    /* UTILIZAMOS DISPLAY FLEX PARA PODER CENTRAR LA IMAGEN DENTRO DE LA GRILLA DEL GRID */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* UTILIZO OVERFLOW: HIDDEN PARA QUE EN EL MOMENTO DE PRODUCIRSE UNA ANIMACION,
+     ESTA NO PRODUSCA SCROLL */
+    overflow: hidden;
+}
+
+.two__container img {
+    width: 100%;
+    /* MANTIENE SU PROPORCION SIN DISTORSIONES OBJECT-FIT:COVER */
+    object-fit: cover;
+    /* EASE-IN DA COMO RESULTADO UNA ANIMACION QUE COMIENZA SUAVEMENTE 
+    Y SE VUELVE MAS RAPIDA AL FINAL DE LA MISMA */
+    animation: right-left 1s ease-in;
+}
+
+footer{
+    height: 100px;
+    background-color: var(--AzulTitle);
+}
 
 
+/* --------------------ANIMACIONES---------------------- */
+@keyframes right-left {
+    0% {
+        opacity: 0;
+        transform: translateX(+100px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
-
-
+@keyframes top-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
