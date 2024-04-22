@@ -13,12 +13,15 @@
     --White: #fff;
     --BlueHover: #D1E3F3;
     --YellowArgentina: #FDC24F;
+    --GrisButtonGrid: #4d4c4c;
+    --Neutral: #DDE1E8;
 }
 
 /* ----------------------------DESKTOP------------------------------ */
 body {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+    background-color: var(--Neutral);
 }
 
 header {
@@ -82,6 +85,7 @@ header {
     grid-template-rows: repeat(4, 1fr);
     background-image: url(img/img__perito__moreno__min.jpg);
     background-size: cover;
+    margin: 0px auto 25px;
 }
 
 .first__container{
@@ -93,9 +97,10 @@ header {
     /* UTILIZO MARGIN-RIGHT:AUTO PARA PEGAR LO MAS POSIBLE HACIA LA IZQUIERDA DEL GRID
      LOS DOS SPAN */
     margin-right: auto;
-    color: var(--AzulTitle);
+    color: #489AD2;
 }
 
+/* ---------------------SPAN---------------------- */
 .spanUno{
     /* ES NECESARIO QUE EL SPAN SE COMPORTE COMO BLOQUE 
     PARA QUE LA ANIMACION SE APLIQUE CORRECTAMENTE */
@@ -115,6 +120,18 @@ header {
 
 .spanTres{
     color: var(--YellowArgentina);
+}
+
+.spanCuatro{
+    font-family: "Caveat", cursive;
+    font-size: 1.5em;
+}
+
+.span__price{
+    font-size: 14px;
+    letter-spacing: .05px;
+    margin-right: 4px;
+    line-height: 20px;
 }
 
 
@@ -139,11 +156,87 @@ header {
     animation: right-left 1s ease-in;
 }
 
-footer{
-    height: 100px;
-    background-color: var(--AzulTitle);
+.h1__container{
+    text-align: center;
+    justify-content: center;
+    font-size: 1em;
+    animation: left-right 1s ease-in;
+    margin: 25px auto;
 }
 
+/* -------------------GRID CONTAINER-------------------- */
+.grid__container{
+    display: grid;
+    /* ESTO CENTRARA TANTO HORIZONTALMENTE COMO VERTICALMENTE
+     EL CONTENIDO DENTRO DE LA CUADRICULA */
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    column-gap: 5px;
+    row-gap: 10px;
+    margin-bottom: 25px;
+
+}
+
+.img__container{
+    width: 100%;
+    height: 200px;
+    background-color: #489AD2;
+}
+.card__container{
+    width: 300px;
+    height: 470px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--White);
+}
+
+.card__info__container{
+    padding: 16px 20px 12px;
+    height: 204px;
+}
+
+.card__title{
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.card__destiny{
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.card__origin{
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: .05px;
+}
+.card__aerolinea{
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: .05px;
+}
+
+.btn__grid{
+    margin-top: 8px;
+    border-style: none;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 24px;
+    align-items: center;
+    letter-spacing: .05px;
+    font-weight: 700;
+    color: var(--GrisButtonGrid);
+}
+
+.info__container{
+    border-top: 1px solid var(--Neutral);
+    height: 66px;
+    padding: 16px 20px 12px;
+}
+.info__container p{
+    font-size: 12px;
+}
 
 /* --------------------ANIMACIONES---------------------- */
 @keyframes right-left {
@@ -166,6 +259,18 @@ footer{
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+    
+}
+
+@keyframes left-right {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
     }
     
 }
