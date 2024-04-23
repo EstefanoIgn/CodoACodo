@@ -43,9 +43,13 @@ header {
     margin: 0 50px;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr .5fr;
     align-items: center;
     position: relative;
+}
+.nav__compras{
+    margin-left: auto;
+    font-size: 20px;
 }
 
 /* MENU DE OPCIONES CON ICONOS */
@@ -302,9 +306,13 @@ header {
     .h1__container{
         font-size: .7em;
     }
+
+    .nav__compras{
+        margin: 0 auto;
+    }
 }
 
-@media only screen and (max-width:572px) {
+@media only screen and (max-width:595px) {
 
     .first__container{
         grid-column: 2/6;
@@ -317,6 +325,9 @@ header {
     .nav__options{
         position: absolute;
         display: none;
+    }
 
+    .nav__compras{
+        display: none;
     }
 }
