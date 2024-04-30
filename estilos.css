@@ -9,7 +9,8 @@
 }
 
 :root {
-    --AzulTitle: #489AD2;
+    --AzulTitle: #489ad2;
+    --AzulHover: #3b7399;
     --White: #fff;
     --BlueHover: #D1E3F3;
     --YellowArgentina: #FDC24F;
@@ -246,6 +247,68 @@ header {
     font-size: 12px;
 }
 
+/* -------------------FORMULARIO--------------------- */
+
+.form__ppal{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(72, 154, 210, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    margin: 0 auto;
+}
+
+.input__group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form__title{
+    color: var(--GrisButtonGrid);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+label{
+    color: var(--GrisButtonGrid);
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input , textarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: var(--White);
+    border: 2px solid #F0FAF1;
+    color: var(--GrisButtonGrid);
+    outline: none;
+}
+
+input::placeholder ,textarea::placeholder{
+    color: #b5cab6;
+}
+
+.btn__submit{
+    font-size: 1em;
+    color: var(--GrisButtonGrid);
+    border: 0;
+    border-radius: 25px;
+    background-color: var(--White);
+    cursor: pointer;
+}
+
+.btn__submit:hover{
+    background-color: var(--AzulHover);
+    color: var(--White);
+}
+
+
+
+
+/* -----------------------FOOTER--------------------- */
 .footer{
     margin: 10px auto;
     text-align: center;
