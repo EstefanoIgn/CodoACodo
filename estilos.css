@@ -19,13 +19,15 @@
 }
 
 /* ----------------------------DESKTOP------------------------------ */
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     background-color: var(--Neutral);
+    position: relative;
 }
 
 header {
@@ -39,7 +41,7 @@ header {
     text-decoration: none;
 }
 
-.nav__title h1{
+.nav__title h1 {
     font-weight: 500;
 }
 
@@ -47,11 +49,12 @@ header {
     margin: 0 50px;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr .5fr;
+    grid-template-columns: 1fr 1fr auto;
     align-items: center;
     position: relative;
 }
-.nav__compras{
+
+.nav__compras {
     margin-left: auto;
     font-size: 20px;
 }
@@ -96,7 +99,7 @@ header {
     background-size: cover;
 }
 
-.first__container{
+.first__container {
     grid-column: 2/4;
     grid-row: 2/4;
     margin-bottom: auto;
@@ -109,8 +112,16 @@ header {
     color: var(--AzulTitle);
 }
 
+.btn__open {
+    display: none;
+}
+
+.btn__closed{
+    display: none;
+}
+
 /* ---------------------SPAN---------------------- */
-.spanUno{
+.spanUno {
     /* ES NECESARIO QUE EL SPAN SE COMPORTE COMO BLOQUE 
     PARA QUE LA ANIMACION SE APLIQUE CORRECTAMENTE */
     display: inline-block;
@@ -122,23 +133,23 @@ header {
 
 }
 
-.spanDos{
+.spanDos {
     font-size: 4em;
     font-weight: 700;
 }
 
-.spanTres{
+.spanTres {
     color: var(--YellowArgentina);
 }
 
-.spanCuatro{
+.spanCuatro {
     display: inline-block;
     font-family: "Caveat", cursive;
     font-size: 1.5em;
     animation: left-right 1s ease-in;
 }
 
-.span__price{
+.span__price {
     font-size: 14px;
     letter-spacing: .05px;
     margin-right: 4px;
@@ -166,52 +177,54 @@ header {
     animation: right-left 1s ease-in;
 }
 
-.h1__container{
+.h1__container {
     text-align: center;
     justify-content: center;
     font-size: 1em;
     margin: 0px auto 25px;
 }
-.h1__container h1{
+
+.h1__container h1 {
     font-weight: 500;
 }
 
 /* -------------------GRID CONTAINER-------------------- */
-.grid__container{
+.grid__container {
     display: grid;
     /* ESTO CENTRARA TANTO HORIZONTALMENTE COMO VERTICALMENTE
      EL CONTENIDO DENTRO DE LA CUADRICULA */
     place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     row-gap: 25px;
     margin-bottom: 25px;
 
 }
 
-.img__container{
+.img__container {
     width: 100%;
     height: 200px;
     background-color: #489AD2;
     overflow: hidden;
 }
 
-.img__container figure{
+.img__container figure {
     width: 100%;
     height: 100%;
 }
-.img__container figure img{
+
+.img__container figure img {
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
     object-fit: cover;
 }
 
-.img__container figure img:hover{
+.img__container figure img:hover {
     transform: scale(1.3);
 }
 
 /* -------------------TARJETAS------------------- */
-.card__container{
+.card__container {
     width: 280px;
     height: 470px;
     border-radius: 10px;
@@ -219,33 +232,34 @@ header {
     background-color: var(--White);
 }
 
-.card__info__container{
+.card__info__container {
     padding: 16px 20px 12px;
     height: 204px;
 }
 
-.card__title{
+.card__title {
     font-family: inherit;
     letter-spacing: 1px;
 }
 
-.card__destiny{
+.card__destiny {
     margin-top: 4px;
     font-weight: 500;
 }
 
-.card__origin{
-    margin-top: 8px;
-    font-size: 14px;
-    letter-spacing: .05px;
-}
-.card__aerolinea{
+.card__origin {
     margin-top: 8px;
     font-size: 14px;
     letter-spacing: .05px;
 }
 
-.btn__grid{
+.card__aerolinea {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: .05px;
+}
+
+.btn__grid {
     margin-top: 8px;
     border-style: none;
     padding: 0 8px;
@@ -259,18 +273,19 @@ header {
     cursor: pointer;
 }
 
-.info__container{
+.info__container {
     border-top: 1px solid var(--Neutral);
     height: 66px;
     padding: 16px 20px 12px;
 }
-.info__container p{
+
+.info__container p {
     font-size: 12px;
 }
 
 /* -------------------FORMULARIO--------------------- */
 
-.form__ppal{
+.form__ppal {
     padding: 50px 55px;
     box-shadow: 0 0 20px rgba(72, 154, 210, 0.2);
     border-radius: 20px;
@@ -279,26 +294,27 @@ header {
     margin: 0 auto;
 }
 
-.input__group{
+.input__group {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.form__title{
+.form__title {
     color: var(--GrisButtonGrid);
     font-size: 35px;
     margin-bottom: 20px;
 }
 
-label{
+label {
     color: var(--GrisButtonGrid);
     font-size: 1em;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-input , textarea{
+input,
+textarea {
     padding: 17px 25px;
     border-radius: 25px;
     margin-bottom: 20px;
@@ -308,17 +324,18 @@ input , textarea{
     outline: none;
 }
 
-textarea{
+textarea {
     /* ESTO EVITA QUE LA CAJA SE PUEDA ESTIRAR MAS ALLA DE SU CONTENEDOR PADRE */
     max-width: 100%;
     max-height: 100px;
 }
 
-input::placeholder ,textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
     color: #b5cab6;
 }
 
-.btn__submit{
+.btn__submit {
     font-size: 1em;
     color: var(--GrisButtonGrid);
     border: 0;
@@ -327,13 +344,13 @@ input::placeholder ,textarea::placeholder{
     cursor: pointer;
 }
 
-.btn__submit:hover{
+.btn__submit:hover {
     background-color: var(--AzulHover);
     color: var(--White);
 }
 
 /* -----------------------FOOTER--------------------- */
-.footer{
+.footer {
     margin: 10px auto;
     text-align: center;
 }
@@ -356,65 +373,120 @@ input::placeholder ,textarea::placeholder{
         opacity: 0;
         transform: translateY(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0px);
     }
-    
+
 }
 
 @keyframes left-right {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
-    
+
 }
 
 /* -----------------------------TABLET 870px----------------------------- */
 @media only screen and (max-width:860px) {
-    .first__container{
+    .first__container {
         grid-column: 1/4;
         grid-row: 2/4;
         margin: auto;
     }
-    .spanUno{
-        font-size: 3em;
-    }
-    .spanDos{
+
+    .spanUno {
         font-size: 3em;
     }
 
-    .h1__container{
+    .spanDos {
+        font-size: 3em;
+    }
+
+    .h1__container {
         font-size: .7em;
     }
 
-    .nav__compras{
+    .nav__compras {
         margin: 0 auto;
+    }
+
+    .nav__container{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
     }
 }
 
 /* ---------------------------- CELULARES ------------------------------- */
 @media only screen and (max-width:595px) {
 
-    .first__container{
+    .first__container {
         grid-column: 2/6;
         grid-row: 2/4;
     }
-    .two__container{
+
+    .two__container {
         display: none;
     }
 
+    .nav__compras {
+        display: none;
+    }
+
+    .btn__open{
+        display: block;
+        width: max-content;
+        grid-column: 3/4;
+        justify-self: center;
+    }
+
+    /* Este selector .nav__container > *:not(.nav__title) seleccionará todos los elementos
+     hijos directos (*) de .nav__container, excepto aquellos que tengan la clase .nav__title */
+    .nav__container{
+        position: static;
+    }
+    
+    .nav__options{
+        opacity: 0;
+        visibility: hidden;
+    }
     .nav__options{
         position: absolute;
-        display: none;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 12em;
+        z-index: 1;
+        background-color: var(--YellowArgentina);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+
     }
 
-    .nav__compras{
-        display: none;
+    .nav__options >.btn__closed{
+        align-items: flex-end;
     }
+
+    .btn__closed{
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav__icons{
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
