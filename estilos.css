@@ -116,10 +116,15 @@ header {
 
 .btn__open {
     display: none;
+    border: 0;
+    background-color: var(--AzulTitle);
+    
 }
 
 .btn__closed{
     display: none;
+    border: 0;
+    background-color: var(--YellowArgentina);
 }
 
 /* ---------------------SPAN---------------------- */
@@ -475,6 +480,11 @@ textarea::placeholder {
         display: flex;
         flex-direction: column;
 
+    }
+
+    .nav__options--visible{
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav__options >.btn__closed{

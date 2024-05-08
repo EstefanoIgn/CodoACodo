@@ -6,3 +6,29 @@ botonesCarrito.forEach(function(botonesCarrito) {
         alert('Agregado al carrito');
     });
 });
+
+
+//Codigo para cerrar y abrir el menu desplegable
+const nav  = document.querySelector("#nav__js")
+const abrir = document.querySelector("#btn__open__js")
+const cerrar = document.querySelector("#btn__closed__js")
+
+const cerrarMenu = () => {
+    nav.classList.remove("nav__options--visible");
+};
+
+
+abrir.addEventListener("click" ,() =>{
+    nav.classList.add("nav__options--visible")
+})
+
+cerrar.addEventListener("click" ,() =>{
+    cerrarMenu()
+})
+
+const opcionesMenu = document.querySelectorAll(".nav__single__icon a")
+opcionesMenu.forEach(opcion =>{
+    opcion.addEventListener("click", () =>{
+        cerrarMenu()
+    })
+})
