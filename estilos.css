@@ -16,6 +16,7 @@
     --YellowArgentina: #FDC24F;
     --GrisButtonGrid: #4d4c4c;
     --Neutral: #DDE1E8;
+    --NeutralFormulario: #afb3b9;
 }
 
 /* ----------------------------DESKTOP------------------------------ */
@@ -291,68 +292,84 @@ header {
 
 /* -------------------FORMULARIO--------------------- */
 
-.form__ppal {
-    padding: 50px 55px;
-    box-shadow: 0 0 20px rgba(72, 154, 210, 0.2);
-    border-radius: 20px;
-    text-align: center;
-    width: 340px;
+.form__container{
+    max-width: 1170px;
     margin: 0 auto;
+    padding: 1.5em;
+    box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.3);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-.input__group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.form__container > *{
+    padding: 1em;
 }
 
-.form__title {
-    color: var(--GrisButtonGrid);
-    font-size: 35px;
-    margin-bottom: 20px;
+.contact__form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-label {
-    color: var(--GrisButtonGrid);
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 15px;
+.contact__form form .block{
+    grid-column: 1/3;
+}
+.contact__form form p{
+    margin: 0;
+    padding: 1em;
+}
+.contact__form h3{
+    text-align: center;
+    font-size: 1.5em;
 }
 
-input,
-textarea {
-    padding: 17px 25px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    background-color: var(--White);
-    border: 2px solid #F0FAF1;
-    color: var(--GrisButtonGrid);
+.contact__form form button,
+.contact__form form input,
+.contact__form form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--NeutralFormulario);
+    font-family: "Poppins", sans-serif;
+    resize: none;
+}
+.contact__form form input:focus{
     outline: none;
 }
 
-textarea {
-    /* ESTO EVITA QUE LA CAJA SE PUEDA ESTIRAR MAS ALLA DE SU CONTENEDOR PADRE */
-    max-width: 100%;
-    max-height: 100px;
+.contact__form form button{
+    background-color: var(--AzulTitle);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1em;
 }
-
-input::placeholder,
-textarea::placeholder {
-    color: #b5cab6;
-}
-
-.btn__submit {
-    font-size: 1em;
-    color: var(--GrisButtonGrid);
-    border: 0;
-    border-radius: 25px;
-    background-color: var(--White);
-    cursor: pointer;
-}
-
-.btn__submit:hover {
-    background-color: var(--AzulHover);
+.contact__form form button:hover,
+.contact__form form button:focus{
+    background-color: var(--GrisButtonGrid);
     color: var(--White);
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contact__info{
+    background-color: var(--NeutralFormulario);
+    padding: 2em;
+}
+
+.contact__info h4,
+.contact__info ul,
+.contact__info p{
+    text-align: left;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.contact__info ul li{
+    padding: .5em;
+}
+
+.contact__info ul li i{
+    margin-right: 12px;
 }
 
 /* -----------------------FOOTER--------------------- */
@@ -428,6 +445,7 @@ textarea::placeholder {
     .nav__options{
         margin: 0 30px;
     }
+    
 }
 
 /* ---------------------------- CELULARES ------------------------------- */
@@ -453,8 +471,6 @@ textarea::placeholder {
         justify-self: center;
     }
 
-    /* Este selector .nav__container > *:not(.nav__title) seleccionará todos los elementos
-     hijos directos (*) de .nav__container, excepto aquellos que tengan la clase .nav__title */
     .nav__container{
         position: static;
     }
@@ -476,7 +492,6 @@ textarea::placeholder {
         padding: 2em;
         display: flex;
         flex-direction: column;
-
     }
 
     .nav__options--visible{
@@ -509,6 +524,14 @@ textarea::placeholder {
         /* NO ENTIENDO MUY BIEN COMO FUNCIONA LA PROPIEDAD FLEX */
         flex: 1 0 auto;
         margin: 0 50px;
+    }
+
+    .form__container{
+        display: block;
+    }
+
+    .contact__form form{
+        display: block;
     }
 
 }

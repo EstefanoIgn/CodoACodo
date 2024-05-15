@@ -22,7 +22,8 @@
                 <img src="assets/icon__open.svg" alt="icon hamburguersa">
             </button>
             <div class="nav__options" id="nav__js">
-                <button class="btn__closed" id="btn__closed__js"><img src="assets/icon__closed.svg" alt="icon closed"></button>
+                <button class="btn__closed" id="btn__closed__js"><img src="assets/icon__closed.svg"
+                        alt="icon closed"></button>
                 <ul class="nav__icons">
                     <li class="nav__single__icon">
                         <a href="#">
@@ -96,7 +97,7 @@
             <div class="info__container">
                 <p>Precio ida y vuelta desde</p>
                 <span class="span__price">$</span>48.348
-            </div>
+            </div>z|
         </div>
         <div class="card__container">
             <div class="img__container">
@@ -276,28 +277,56 @@
         </div>
     </div>
     <!-- FORMULARIO -->
-    <form class="form__ppal" action="https://formsubmit.co/estefano.ign@gmail.com" method="POST" id="nav--contact">
-        <h2 class="form__title">Contacto</h2>
-        <div class="input__group">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
+    <div class="form__container" id="nav--contact">
+        <div class="contact__form">
+            <h3>Contáctanos</h3>
+            <form>
+                <p>
+                    <label for="fullname">Nombre</label>
+                    <input type="text" name="fullname" id="fullname">
+                </p>
 
-            <label for="phone">Telefono</label>
-            <input type="phone" name="phone" id="phone" placeholder="Tel">
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </p>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+                <p>
+                    <label for="tel">Teléfono</label>
+                    <input type="tel" id="tel">
+                </p>
 
-            <label for="message">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                <p>
+                    <label for="affair">Asunto</label>
+                    <input type="text" name="affair" id="affair">
+                </p>
 
-            <input class="btn__submit" type="submit" value="Enviar">
-            <!-- ESTOS SIGUIENTES INPUTS SIRVEN PARA NO HACER 
-                UN CAPTCHA CADA VEZ QUE CARGUEMOS EL FORMULARIO -->
-            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
-            <input type="hidden" name="_captcha" value="false">
+                <p class="block">
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" rows="3"></textarea>
+                </p>
+
+                <p class="block">
+                    <button type="submit">Enviar</button>
+                </p>
+            </form>
         </div>
-    </form>
+        <div class="contact__info">
+            <h4>Mas información</h4>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i>Córdoba, Jesús Maria</li>
+                <li><i class="fa-solid fa-phone"></i>+54 3525529199</li>
+                <li><i class="fa-solid fa-envelope"></i>estefano.ign@gmail.com</li>
+            </ul>
+            <p>
+                "Descubre el mundo con nuestros vuelos a precios inigualables. Experiencia y comodidad garantizadas.
+                ¡Reserva tu aventura hoy con nosotros!"
+            </p>
+            <p>
+                <a href="https://estefanoign.github.io/CodoACodo/">argenviajes.com</a> 
+            </p>
+        </div>
+    </div>
     <!-- PIE DE PAGINA -->
     <footer class="footer">Todos los Derechos Reservados</footer>
     <script src="app.js"></script>
