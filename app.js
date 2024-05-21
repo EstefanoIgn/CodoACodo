@@ -32,3 +32,14 @@ opcionesMenu.forEach(opcion =>{
         cerrarMenu()
     })
 })
+
+
+//ESTO ES PARA CAMBIAR EL COLOR DE FONDO DE aerolineas__container
+document.addEventListener('scroll', function() {
+    const container = document.querySelector('.aerolineas__container');
+    if (window.scrollY >  490) { // Cambia 50 por el valor que desees
+        container.classList.add('scrolled');
+    } else {
+        container.classList.remove('scrolled');
+    }
+});
