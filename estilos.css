@@ -372,6 +372,33 @@ header {
     margin-right: 12px;
 }
 
+
+/* -----------------------AEROLINEAS----------------------- */
+.aerolineas{
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aerolineas .container__brands{
+    margin: 0 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.aerolineas .container__brands a img{
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 /* -----------------------FOOTER--------------------- */
 .footer {
     margin: 10px auto;
