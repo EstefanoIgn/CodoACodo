@@ -567,8 +567,51 @@ header {
         display: block;
     }
 
+    .form__container{
+        box-shadow: none;
+    }
     .contact__form form{
         display: block;
+    }
+
+    .aerolineas__container{
+        width: 100vw;
+        overflow: hidden;
+        margin: auto;
+        border-bottom: none;
+    }
+
+    .brands__wrapper{
+        display: flex;
+    }
+
+    .brands__container{
+        width: 100%;
+        animation: 15s infinite slide linear;
+    }
+
+    .brands__container a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+    }
+
+    .brands__container a img{
+        width: auto;
+    }
+
+    .aerolineas__container.scrolled{
+        background-color: var(--Neutral);
+    }
+
+    @keyframes slide {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-200%);
+        }
     }
 
 }
