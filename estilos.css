@@ -94,7 +94,7 @@ header {
 
 .main__container {
     width: 100%;
-    height: 72vh;
+    height: 74vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -378,7 +378,6 @@ header {
     position: sticky;
     top: 0;
     padding: 0 15px;
-    border-bottom: .5px solid var(--AzulHover);
     transition: background-color 0.3s;
     z-index: 1;
 }
