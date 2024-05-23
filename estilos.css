@@ -524,8 +524,9 @@ header {
         right: 0;
         bottom: 0;
         margin: 0;
+        height: 100%;
         width: 12em;
-        z-index: 1;
+        z-index: 100;
         background-color: var(--YellowArgentina);
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         padding: 2em;
@@ -565,9 +566,9 @@ header {
         margin: 0 50px;
     }
 
-     .first__container{
+    .first__container{
         grid-row: 1/3;
-     }
+    }
 
 
     .form__container{
@@ -577,6 +578,7 @@ header {
     .form__container{
         box-shadow: none;
     }
+    
     .contact__form form{
         display: block;
     }
@@ -597,7 +599,7 @@ header {
     }
 
     .brands__container{
-        width: calc(648px * 2);
+        width: calc(648.94px * 2);
         animation: 10s infinite slide linear;
     }
 
