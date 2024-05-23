@@ -376,7 +376,7 @@ header {
 /* -----------------------AEROLINEAS----------------------- */
 .logos{
     overflow: hidden;
-    padding: 8px 0;
+    padding: 18px 0;
     background: white;
     white-space: nowrap;
 }
@@ -476,6 +476,10 @@ header {
     .nav__options{
         margin: 0 30px;
     }
+
+    .logos{
+        padding: 10px 0;
+    }
 }
 
 /* ---------------------------- CELULARES ------------------------------- */
@@ -573,6 +577,5 @@ header {
     .contact__form form{
         display: block;
     }
-
 }
 
