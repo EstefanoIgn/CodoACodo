@@ -387,7 +387,7 @@ header {
 
 .logos__slide{
     display: inline-block;
-    animation: 5s slide infinite linear;
+    animation: 10s slide infinite linear;
 }
 .logos__slide img{
     height: 40px;
