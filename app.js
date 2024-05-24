@@ -42,7 +42,6 @@ document.addEventListener('scroll', function() {
     } else {
         container.classList.remove('scrolled');
     }
-
 });
 
 // Validacion del formulario con //
@@ -126,4 +125,3 @@ function validateTel(tel) {
     const re = /^\d+$/;
     return re.test(String(tel));
 }
-
