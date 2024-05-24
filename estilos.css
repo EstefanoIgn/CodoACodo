@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --AzulTitle: #489ad2;
+    --AzulHover: #3b7399;
+    --White: #fff;
+    --BlueHover: #D1E3F3;
+    --YellowArgentina: #FDC24F;
+    --GrisButtonGrid: #4d4c4c;
+    --Neutral: #DDE1E8;
+    --NeutralFormulario: #afb3b9;
+}
+
+/* ----------------------------DESKTOP------------------------------ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--Neutral);
+    position: relative;
+    /* ANCHO MINIMO IMPIDE QUE LA PAGINA SE ACHIQUE MAS ALLA DE LO ESTABLECIDO EN MIN-WIDTH */
+    min-width: 375px;
+}
+
+header {
+    height: 70px;
+    background-color: var(--AzulTitle);
+}
+
+.nav__title {
+    color: var(--White);
+    width: max-content;
+    text-decoration: none;
+}
+
+.nav__title h1 {
+    font-weight: 500;
+}
+
+.nav__container {
+    margin: 0 50px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    position: relative;
+}
+
+.nav__compras {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+/* MENU DE OPCIONES CON ICONOS */
+.nav__options {
+    margin: 0 25px;
+}
+
+.nav__icons {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__single__icon {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+}
+
+.nav__single__icon a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+.nav__single__icon a:hover {
+    color: var(--BlueHover);
+}
+
+.icon__img {
+    /* USAMOS TEXT ALIGN PARA ALINEAR HORIZONTALMENTE LA IMAGEN SVG */
+    text-align: center;
+}
+
+.main__container {
+    width: 100%;
+    height: 74vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-image: url(img/img__perito__moreno__min.jpg);
+    background-size: cover;
+}
+
+.first__container {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    margin-bottom: auto;
+    text-align: center;
+    align-self: center;
+    line-height: 50px;
+    /* UTILIZO MARGIN-RIGHT:AUTO PARA PEGAR LO MAS POSIBLE HACIA LA IZQUIERDA DEL GRID
+     LOS DOS SPAN */
+    margin-right: auto;
+    color: var(--AzulTitle);
+}
+
+.btn__open {
+    display: none;
+    border: 0;
+    background-color: var(--AzulTitle);
+    
+}
+
+.btn__closed{
+    display: none;
+    border: 0;
+    background-color: var(--YellowArgentina);
+}
+
+/* ---------------------SPAN---------------------- */
+.spanUno {
+    /* ES NECESARIO QUE EL SPAN SE COMPORTE COMO BLOQUE 
+    PARA QUE LA ANIMACION SE APLIQUE CORRECTAMENTE */
+    display: inline-block;
+    font-family: "Caveat", cursive;
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--White);
+    animation: top-down 1s ease-in;
+
+}
+
+.spanDos {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.spanTres {
+    color: var(--YellowArgentina);
+}
+
+.spanCuatro {
+    display: inline-block;
+    font-family: "Caveat", cursive;
+    font-size: 1.5em;
+    animation: left-right 1s ease-in;
+}
+
+.span__price {
+    font-size: 14px;
+    letter-spacing: .05px;
+    margin-right: 4px;
+    line-height: 20px;
+}
+
+.two__container {
+    grid-column: 4/7;
+    grid-row: 1/5;
+    /* UTILIZAMOS DISPLAY FLEX PARA PODER CENTRAR LA IMAGEN DENTRO DE LA GRILLA DEL GRID */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* UTILIZO OVERFLOW: HIDDEN PARA QUE EN EL MOMENTO DE PRODUCIRSE UNA ANIMACION,
+     ESTA NO PRODUSCA SCROLL */
+    overflow: hidden;
+}
+
+.two__container img {
+    width: 85%;
+    /* MANTIENE SU PROPORCION SIN DISTORSIONES OBJECT-FIT:COVER */
+    object-fit: cover;
+    /* EASE-IN DA COMO RESULTADO UNA ANIMACION QUE COMIENZA SUAVEMENTE 
+    Y SE VUELVE MAS RAPIDA AL FINAL DE LA MISMA */
+    animation: right-left 1s ease-in;
+}
+
+.h1__container {
+    text-align: center;
+    justify-content: center;
+    font-size: 1em;
+    margin: 0px auto 25px;
+}
+
+.h1__container h1 {
+    font-weight: 500;
+}
+
+/* -------------------GRID CONTAINER-------------------- */
+.grid__container {
+    display: grid;
+    /* ESTO CENTRARA TANTO HORIZONTALMENTE COMO VERTICALMENTE
+     EL CONTENIDO DENTRO DE LA CUADRICULA */
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 25px;
+    margin-bottom: 25px;
+}
+
+.img__container {
+    width: 100%;
+    height: 200px;
+    background-color: #489AD2;
+    overflow: hidden;
+}
+
+.img__container figure {
+    width: 100%;
+    height: 100%;
+}
+
+.img__container figure img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.img__container figure img:hover {
+    transform: scale(1.3);
+}
+
+/* -------------------TARJETAS------------------- */
+.card__container {
+    width: 280px;
+    height: 470px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--White);
+}
+
+.card__info__container {
+    padding: 16px 20px 12px;
+    height: 204px;
+}
+
+.card__title {
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.card__destiny {
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.card__origin {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: .05px;
+}
+
+.card__aerolinea {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: .05px;
+}
+
+.btn__grid {
+    margin-top: 8px;
+    border-style: none;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 24px;
+    align-items: center;
+    letter-spacing: .05px;
+    font-weight: 700;
+    color: var(--GrisButtonGrid);
+    cursor: pointer;
+}
+
+.info__container {
+    border-top: 1px solid var(--Neutral);
+    height: 66px;
+    padding: 16px 20px 12px;
+}
+
+.info__container p {
+    font-size: 12px;
+}
+
+/* -------------------FORMULARIO--------------------- */
+
+.form__container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1.5em;
+    box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.3);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.form__container > *{
+    padding: 1em;
+}
+
+.contact__form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact__form form .block{
+    grid-column: 1/3;
+}
+.contact__form form p{
+    margin: 0;
+    padding: 1em;
+}
+.contact__form h3{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.contact__form form button,
+.contact__form form input,
+.contact__form form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--NeutralFormulario);
+    font-family: "Poppins", sans-serif;
+    resize: none;
+}
+.contact__form form input:focus{
+    outline: none;
+}
+
+.contact__form form button{
+    background-color: var(--AzulTitle);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1em;
+}
+.contact__form form button:hover,
+.contact__form form button:focus{
+    background-color: var(--GrisButtonGrid);
+    color: var(--White);
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contact__info{
+    background-color: var(--NeutralFormulario);
+    padding: 2em;
+}
+
+.contact__info h4,
+.contact__info ul,
+.contact__info p{
+    text-align: left;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.contact__info ul li{
+    padding: .5em;
+}
+
+.contact__info ul li i{
+    margin-right: 12px;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+
+/* -----------------------AEROLINEAS----------------------- */
+.logos{
+    overflow: hidden;
+    padding: 18px 0;
+    background: white;
+    white-space: nowrap;
+}
+
+.logos:hover .logos__slide{
+    animation-play-state: paused;
+}
+
+.logos__slide{
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+.logos__slide img{
+    height: 40px;
+    margin: 0 15px;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* -----------------------FOOTER--------------------- */
+.footer {
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* --------------------ANIMACIONES---------------------- */
+@keyframes right-left {
+    0% {
+        opacity: 0;
+        transform: translateX(+100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes top-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes left-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+/* -----------------------------TABLET 860px----------------------------- */
+@media only screen and (max-width:860px) {
+    .first__container {
+        grid-column: 1/4;
+        grid-row: 2/4;
+        margin: auto;
+    }
+
+    .spanUno {
+        font-size: 3em;
+    }
+
+    .spanDos {
+        font-size: 3em;
+    }
+
+    .h1__container {
+        font-size: .7em;
+    }
+
+    .nav__compras {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__options{
+        margin: 0 30px;
+    }
+
+    .logos{
+        padding: 10px 0;
+    }
+}
+
+/* ---------------------------- CELULARES ------------------------------- */
+@media only screen and (max-width:650px) {
+
+    .first__container {
+        grid-column: 2/6;
+        grid-row: 2/4;
+    }
+
+    .two__container {
+        display: none;
+    }
+
+    .nav__compras {
+        display: none;
+    }
+
+    .btn__open{
+        display: block;
+        width: max-content;
+        grid-column: 3/4;
+        justify-self: center;
+    }
+
+    .nav__container{
+        position: static;
+    }
+    
+    .nav__options{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav__options{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        height: 100%;
+        width: 12em;
+        z-index: 100;
+        background-color: var(--YellowArgentina);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__options--visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__options >.btn__closed{
+        align-items: flex-end;
+    }
+
+    .btn__closed{
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav__icons{
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid__container{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+
+    .grid__container .card__container{
+        /* NO ENTIENDO MUY BIEN COMO FUNCIONA LA PROPIEDAD FLEX */
+        flex: 1 0 auto;
+        margin: 0 50px;
+    }
+
+    .first__container{
+        grid-row: 1/3;
+    }
+
+
+    .form__container{
+        display: block;
+    }
+
+    .form__container{
+        box-shadow: none;
+    }
+    
+    .contact__form form{
+        display: block;
+    }
+}
+
