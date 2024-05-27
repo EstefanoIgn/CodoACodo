@@ -371,6 +371,8 @@ header {
 .contact__info ul li i{
     margin-right: 12px;
 }
+
+
 .error {
     color: red;
     font-size: 0.9em;
